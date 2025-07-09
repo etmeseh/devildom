@@ -82,6 +82,8 @@ Script çalışırken:
 
 W, A, S, D rastgele zamanlarla basılır
 
+F8 Tuşu scripti başlatıp durdurur.
+
 ## 🔐 Notlar
 Script, bazı işlemleri gerçekleştirmek için Yönetici olarak çalıştırılmalıdır.
 
@@ -93,5 +95,7 @@ Girişler yalnızca aktif pencere "Rappelz" olduğunda yapılır.
 ```
 farm.py             → Ana Python scripti
 requirements.txt    → Gerekli bağımlılıklar
+start.bat           → Sağ tık Yönetici olarak çalıştırılmasını sağlar (python)
+start3.bat          → Sağ tık Yönetici olarak çalıştırılmasını sağlar (python3)
 README.md           → Bu dökümantasyon
 ```
