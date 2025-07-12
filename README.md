@@ -1,4 +1,4 @@
-\# 🧠 Raqpelz Otomatik Tuş Botu
+# 🧠 Raqpelz Otomatik Tuş Botu - v1.2
 
 
 
@@ -7,6 +7,11 @@ Bu Python scripti, Raqpelz oyun penceresi aktifken:
 \- Belirli aralıklarla 1, 2, 3, 4 tuşlarına basar (kullanıcı tanımlı)
 
 \- Rastgele zamanlarda W, A, S, D yön tuşlarına basarak hareket simülasyonu yapar
+
+\- F8 tuşu ile başlatılır/durdurulur
+
+\- Tüm ayarlar GUI (grafik arayüz) üzerinden yapılandırılır
+
 
 
 
@@ -50,7 +55,7 @@ Terminalde (PowerShell, CMD veya Git Bash):
 
 ```
 # Proje klasörüne git
-cd proje-klasoru
+cd devildom
 
 # (İsteğe bağlı) Sanal ortam oluştur ve aktif et
 python -m venv venv
@@ -61,31 +66,45 @@ pip install -r requirements.txt
 
 ```
 
-### Scripti Çalıştır
+### Botu Başlatmak
 
 ```
-python3 ./farm.py
+bot_launcher.bat    (Yönetici olarak çalıştırılmalıdır.)
 
 ```
 
-## Başlangıçta senden aşağıdaki gibi tuş aralıkları istenir:
+## Başlangıçta seni aşağıdaki ekran karşılar:
 ```
-Enter interval for key '1' (in seconds): 0.5
-Enter interval for key '2' (in seconds): 1
-Enter interval for key '3' (in seconds): 1.5
-Enter interval for key '4' (in seconds): 2
+[1] Ayarları Aç (GUI)
+[2] Botu Başlat (farm.py)
+[Q] Çıkış
+
 ```
 
-Script çalışırken:
+Ekranda beliren seçenekleri tercih etmek için [] içindeki değerleri tuşlayıp Enter'e basın:
 
-1-4 tuşlarına verdiğin sürelerle basılır
+### [1] Ayarları Aç (GUI) 
 
-W, A, S, D rastgele zamanlarla basılır
+W, A, S, D yön tuşlarından hangilerine ne sıklıkla basılacağını belirleyebilirsiniz.
 
-F8 Tuşu scripti başlatıp durdurur.
+1, 2, 3, 4 skill tuşlarına ne sıklıkla basılacağını belirleyebilirsiniz.
+
+Bu ayarlamalar bilgisayarınızda kayıtlı olup tekrar değiştirmek için bu sectionu tekrarlamanız yeterlidir.
+
+### [2] Botu Başlat (farm.py)
+
+Bu seçenek  botu hazır hale getirir. Oyun penceresinin aktif olduğu durumda f8 tuşuyla etkinleştirilmeyi bekler. 
+
+Ctrl + C ile terminal ekranından sonlandırılabilir.
+
+### [Q] Çıkış
+
+Botu başlatmadan hızlı çıkış kullanılabilir. Alt+f4 alternatifi olarak görebilirsiniz.
+
+
 
 ## 🔐 Notlar
-Script, bazı işlemleri gerçekleştirmek için Yönetici olarak çalıştırılmalıdır.
+Script, bazı işlemleri gerçekleştirmek için Yönetici olarak çalıştırılmalıdır. (ön ayarların kayıtlanması, tuş basım teklitlerinin yapılması vb.)
 
 Oyun penceresi tam olarak "Rappelz" ismine sahip olmalıdır.
 
@@ -93,9 +112,23 @@ Girişler yalnızca aktif pencere "Rappelz" olduğunda yapılır.
 
 ## Dosyalar
 ```
-farm.py             → Ana Python scripti
-requirements.txt    → Gerekli bağımlılıklar
-start.bat           → Sağ tık Yönetici olarak çalıştırılmasını sağlar (python)
-start3.bat          → Sağ tık Yönetici olarak çalıştırılmasını sağlar (python3)
-README.md           → Bu dökümantasyon
+config_gui.py         → Ayarları belirlemek için GUI
+farm.py               → Botun çalıştığı ana script
+bot_launcher.bat      → GUI ve farm.py’yi yöneten menülü başlatıcı (sağ click yönetici olarak çalıştır)
+config.json           → GUI ile oluşturulan yapılandırma dosyası
+requirements.txt      → Gerekli modüller (keyboard, pygetwindow)
+
 ```
+## 📌 v1.1 Yenilikleri
+F8 tuşu botu başlatıp durdurma.
+
+Admin olarak başlatma kolaylığı için iki farklı .bat dosyası ekleme.
+
+## 📌 v1.2 Yenilikleri
+Tuş aralıkları GUI ile ayarlanabilir
+
+WASD yönleri kullanıcı tarafından seçilebilir
+
+Hareket süresi ve gecikme aralığı belirlenebilir
+
+Tek bir farm_launcher.bat dosyası üzerinden Python/Python3 uyumlu başlatma
