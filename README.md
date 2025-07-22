@@ -132,3 +132,13 @@ WASD yönleri kullanıcı tarafından seçilebilir
 Hareket süresi ve gecikme aralığı belirlenebilir
 
 Tek bir farm_launcher.bat dosyası üzerinden Python/Python3 uyumlu başlatma
+
+## 📌 v1.2.1 Yenilikleri
+- Oyun penceresinde mouse sağ tuş ile sağa/sola kaydırma (drag) hareketi eklendi. F9 ile başlatılıp durdurulabilir.
+- Bu özellik için yeni bir paket eklendi: `pyautogui`. Güncellemek için terminalde aşağıdaki komutu çalıştırın:
+
+```powershell
+pip install -r requirements.txt
+```
+
+Mevcut botu kullanabilmek için bu güncellemeyi yüklemeniz gerekmektedir.
